@@ -1,0 +1,429 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% comment %}Font{% endcomment %}
+    {% comment %} ===Montserrat=== {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    {% comment %} ====Oswald==== {% endcomment %}
+        {% comment %}
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        {% endcomment %}
+    {% comment %} ====Poppins==== {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    {% comment %}Font End{% endcomment %}
+    {% comment %} Animations {% endcomment %}
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    {% comment %} Animations End {% endcomment %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    {% block head %}{% endblock %}
+    <title>{% block title %}Ray Advertising LLC{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% comment %} <link rel="stylesheet" href="{% static 'css/minfy.css' %}"> {% endcomment %}
+</head>
+<body>
+    {% comment %} Navbar {% endcomment %}
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navMenu">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}"><img class="logo"
+                    src="{% static 'images/Assets/Logo.webp' %}" alt="Logo" loading="lazy"></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active navMenuItem" aria-current="page" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active navMenuItem" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'paypercall' %}">Pay Per Call</a></li>
+                            <li><a class="dropdown-item" href="{% url 'leadgeneration' %}">Lead Generation</a></li>
+                            <li><a class="dropdown-item" href="{% url 'affiliatenetwork' %}">Affiliate Network</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mediabuying' %}">Media Buying</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active navMenuItem" aria-current="page" href="{% url 'events' %}">Events</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active navMenuItem" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Company
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'careers' %}">Careers</a></li>
+                            <li><a class="dropdown-item" href="{% url 'contact' %}">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active navMenuItem" aria-current="page" href="{% url 'blog' %}">Blog</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle joinButton" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Get Started
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'publisher' %}">Publisher</a></li>
+                            <li><a class="dropdown-item" href="{% url 'advertiser' %}">Advertiser</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div class="forMboileTP" role="search">
+                <div class="dropdown me-2">
+                    <button class="btn btn-secondary dropdown-toggle joinMobile joinButton" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Get Started
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'publisher' %}">Publisher</a></li>
+                        <li><a class="dropdown-item" href="{% url 'advertiser' %}">Advertiser</a></li>
+                    </ul>
+                </div>
+                <button class="bargerMenu" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                    aria-controls="offcanvasExample">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    {% comment %} mobile Navbar Satter {% endcomment %}
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header backgroundBlu">
+            <a class="navbar-brand" href="{% url 'home' %}"><img class="logo"
+                    src="{% static 'images/Assets/Logo.webp' %}" alt="Logo" loading="lazy"></a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body backgroundBlu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active navMenuItem" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'paypercall' %}">Pay Per Call</a></li>
+                        <li><a class="dropdown-item" href="{% url 'leadgeneration' %}">Lead Generation</a></li>
+                        <li><a class="dropdown-item" href="{% url 'affiliatenetwork' %}">Affiliate Network</a></li>
+                        <li><a class="dropdown-item" href="{% url 'mediabuying' %}">Media Buying</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active navMenuItem" aria-current="page" href="{% url 'events' %}">Events</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active navMenuItem" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Company
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'careers' %}">Careers</a></li>
+                        <li><a class="dropdown-item" href="{% url 'contact' %}">Contact Up</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active navMenuItem" aria-current="page" href="{% url 'blog' %}">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {% comment %} Navbar End {% endcomment %}
+    {% block body %}{% endblock %}
+    {% comment %} {% endcomment %}
+    <div class="footer">
+        <img class="FooterBG" src="{% static 'images/Assets/FooterBG.webp' %}" alt="" loading="lazy">
+        <div class="container footerWaper">
+            <div class="uperFooter">
+                <div class="footerLogo">
+                    <a class="navbar-brand" href="{% url 'home' %}"><img class="logo"
+                            src="{% static 'images/Assets/Logo.webp' %}" alt="Logo" loading="lazy"></a>
+                    <div class="footerIconWaper">
+                        <a href="https://www.facebook.com/rayadvertisingllc" id='facebook' target='blank'>
+                            <div class="footerIcon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_270_7942)">
+                                        <path
+                                            d="M2.25005 8.18398V14H5.51255V8.18398H7.94536L8.45161 5.50977H5.51255V4.56367C5.51255 3.15 6.08349 2.60859 7.55724 2.60859C8.01567 2.60859 8.38411 2.61953 8.59786 2.64141V0.216016C8.19567 0.109375 7.2113 0 6.64317 0C3.63661 0 2.25005 1.38086 2.25005 4.35859V5.50977H0.393799V8.18398H2.25005Z"
+                                            fill="#00BCD0" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_270_7942">
+                                            <rect width="9" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/company/rayadvertising/posts/?feedView=all" id='linkdin'
+                            target='blank'>
+                            <div class="footerIcon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_270_7944)">
+                                        <path
+                                            d="M2.68661 12H0.198214V3.98839H2.68661V12ZM1.44107 2.89554C0.645536 2.89554 0 2.23661 0 1.44107C0 1.05888 0.151827 0.692333 0.42208 0.42208C0.692333 0.151827 1.05888 0 1.44107 0C1.82327 0 2.18981 0.151827 2.46006 0.42208C2.73032 0.692333 2.88214 1.05888 2.88214 1.44107C2.88214 2.23661 2.23661 2.89554 1.44107 2.89554ZM11.9973 12H9.51429V8.1C9.51429 7.17054 9.49554 5.97857 8.22054 5.97857C6.92679 5.97857 6.72857 6.98839 6.72857 8.03304V12H4.24286V3.98839H6.62946V5.08125H6.66429C6.99643 4.45179 7.80804 3.7875 9.01875 3.7875C11.5366 3.7875 12 5.44554 12 7.59911V12H11.9973Z"
+                                            fill="#00BCD0" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_270_7944">
+                                            <rect width="12" height="12" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://x.com/rayadvertising?lang=he&mx=2" id='X' target='blank'>
+                            <div class="footerIcon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14"
+                                    fill="none">
+                                    <path
+                                        d="M11.1422 1.3125H13.0726L8.85623 6.13047L13.8164 12.6875H9.93357L6.89021 8.71172L3.41208 12.6875H1.47888L5.98787 7.5332L1.23279 1.3125H5.21404L7.96208 4.94648L11.1422 1.3125ZM10.464 11.5336H11.5332L4.63162 2.40625H3.48318L10.464 11.5336Z"
+                                        fill="#00BCD0" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/ray_advertising/" id='instagram' target='blank'>
+                            <div class="footerIcon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_270_7948)">
+                                        <path
+                                            d="M6.50288 3.85537C4.65735 3.85537 3.16873 5.25811 3.16873 6.99717C3.16873 8.73623 4.65735 10.139 6.50288 10.139C8.34842 10.139 9.83703 8.73623 9.83703 6.99717C9.83703 5.25811 8.34842 3.85537 6.50288 3.85537ZM6.50288 9.03975C5.31025 9.03975 4.33525 8.12373 4.33525 6.99717C4.33525 5.87061 5.30735 4.95459 6.50288 4.95459C7.69842 4.95459 8.67052 5.87061 8.67052 6.99717C8.67052 8.12373 7.69552 9.03975 6.50288 9.03975ZM10.7511 3.72686C10.7511 4.13428 10.4029 4.45967 9.97342 4.45967C9.54105 4.45967 9.19574 4.13154 9.19574 3.72686C9.19574 3.32217 9.54395 2.99404 9.97342 2.99404C10.4029 2.99404 10.7511 3.32217 10.7511 3.72686ZM12.9594 4.47061C12.91 3.48896 12.6721 2.61943 11.9089 1.90303C11.1486 1.18662 10.2259 0.962402 9.18413 0.913184C8.11047 0.855762 4.89239 0.855762 3.81873 0.913184C2.77989 0.959668 1.85712 1.18389 1.09395 1.90029C0.330783 2.6167 0.095738 3.48623 0.0435059 4.46787C-0.0174316 5.47959 -0.0174316 8.51201 0.0435059 9.52373C0.0928362 10.5054 0.330783 11.3749 1.09395 12.0913C1.85712 12.8077 2.77699 13.0319 3.81873 13.0812C4.89239 13.1386 8.11047 13.1386 9.18413 13.0812C10.2259 13.0347 11.1486 12.8104 11.9089 12.0913C12.6692 11.3749 12.9071 10.5054 12.9594 9.52373C13.0203 8.51201 13.0203 5.48232 12.9594 4.47061ZM11.5723 10.6093C11.346 11.1452 10.9078 11.5581 10.3361 11.7741C9.48011 12.094 7.44886 12.0202 6.50288 12.0202C5.5569 12.0202 3.52275 12.0913 2.66962 11.7741C2.10087 11.5608 1.6627 11.1479 1.43346 10.6093C1.09395 9.80264 1.1723 7.88857 1.1723 6.99717C1.1723 6.10576 1.09685 4.18896 1.43346 3.38506C1.6598 2.84912 2.09797 2.43623 2.66962 2.22021C3.52565 1.90029 5.5569 1.97412 6.50288 1.97412C7.44886 1.97412 9.48302 1.90303 10.3361 2.22021C10.9049 2.4335 11.3431 2.84639 11.5723 3.38506C11.9118 4.1917 11.8335 6.10576 11.8335 6.99717C11.8335 7.88857 11.9118 9.80537 11.5723 10.6093Z"
+                                            fill="#00BCD0" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_270_7948">
+                                            <rect width="13" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerPhoneFlex">
+                    <div class="footerLink">
+                        <h5>Services</h5>
+                        <ul>
+                            <li>
+                                <a href="{% url 'paypercall' %}" class="footerClickLink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                    Pay Per Call
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'leadgeneration' %}" class="footerClickLink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                    Lead Generation
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'affiliatenetwork' %}" class="footerClickLink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                    Affiliate Marketing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'mediabuying' %}" class="footerClickLink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                    Media Buying
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footerLink">
+                        <h5>Company</h5>
+                        <ul>
+                            <li>
+                                <a href="{% url 'about' %}" class="footerClickLink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'contact' %}" class="footerClickLink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'careers' %}" class="footerClickLink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                    Careers
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'blog' %}" class="footerClickLink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                    Blog
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footerLink">
+                    <h5>Join US</h5>
+                    <ul>
+                        <li>
+                            <a href="{% url 'advertiser' %}" class="footerClickLink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                </svg>
+                                Advertisers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'publisher' %}" class="footerClickLink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                </svg>
+                                Affiliates
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footerAddress">
+                    <h5>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                        </svg>
+                        USA Office:
+                    </h5>
+                    <p>1267 Willis ST STE 200<br> Redding CA 96001 USA</p>
+                    <p>
+                        <a href="tel:+14356277657" class="footerClickLink">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                            </svg>
+                            (435) 627-7657
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:contact@rayadvertising.com" class="footerClickLink">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                            </svg>
+                            contact@rayadvertising.com
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+            <div class="lowerFooter">
+                <hr>
+                <div class="lowerFooterWaper">
+                    <a href="#" class="footerClickLink">
+                        <p><a class="text-white" href="{% url 'privacypolicy' %}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                </svg>
+                            Privacy Policy
+                        </a>
+                        </p>
+                    </a>
+                    <a class="footerClickLink">
+                        <p class="footerClickLinkPragrap"><a class="text-white" href="{% url 'TermsandConditions' %}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                </svg>
+                            Terms and Conditions
+                        </a></p>
+                    </a>
+                    <a href="#" class="footerClickLink">
+                        <p><a class="text-white" href="{% url 'disclaimer' %}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                </svg>
+                            Disclaimer
+                        </a></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2024 RAY ADVERTISING | All rights reserved</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    {% comment %} Animation {% endcomment %}
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

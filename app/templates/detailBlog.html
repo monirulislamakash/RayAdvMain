@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+{% block title %}Ray Advertising LLC{% endblock %}
+{% block body %}
+<div class="AboutHeroSection">
+    <img class="AboutHeroSectionBG" src="{% static 'images/Assets/Hero-bg.webp' %}" alt="heroBg" loading="lazy">
+    <div class="falingSterWaper">
+        <span class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span>
+    </div>
+    <div class='AboutwoldWaper'>
+        <img class="Aboutwold" src="{% static 'images/Assets/Globe.webp' %}" alt="wold" loading="lazy">
+    </div>
+    <div class="AboutOverlay"></div>
+    <img class="Aboutcarv" src="{% static 'images/Assets/carv.webp' %}" alt="carv" loading="lazy">
+    <div class="AboutheroContent container">
+        <h1 class="AboutheroHeader">
+            {{GetAllBlog.Titel}}
+        </h1>
+    </div>
+</div>
+<div class="DetailsBlog container">
+    <div class="DetailsBlogMain">
+        <div class="Thumnail">
+            <img src="{{GetAllBlog.Images.url}}" alt="" loading="lazy">
+        </div>
+        <div class="BlogShear">
+            <button class="BlogShearButton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                        d="M9.59375 1.08715C9.23438 1.24653 9 1.6059 9 1.99965V3.99965H5.5C2.4625 3.99965 0 6.46215 0 9.49965C0 13.0403 2.54688 14.6215 3.13125 14.9403C3.20937 14.984 3.29688 14.9997 3.38438 14.9997C3.725 14.9997 4 14.7215 4 14.384C4 14.1497 3.86562 13.934 3.69375 13.7747C3.4 13.4965 3 12.9497 3 11.9997C3 10.3434 4.34375 8.99965 6 8.99965H9V10.9997C9 11.3934 9.23125 11.7528 9.59375 11.9122C9.95625 12.0715 10.375 12.0059 10.6687 11.7434L15.6687 7.2434C15.8781 7.05278 16 6.78403 16 6.49965C16 6.21528 15.8812 5.94653 15.6687 5.7559L10.6687 1.2559C10.375 0.990278 9.95312 0.924653 9.59375 1.08715Z"
+                        fill="#56C0CC" />
+                </svg>
+                Share on:
+            </button>
+            <a href="" class="BlogShearSosalIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
+                    <g clip-path="url(#clip0_6038_7622)">
+                        <path
+                            d="M3.75 14.0297V24H9.1875V14.0297H13.2422L14.0859 9.44531H9.1875V7.82344C9.1875 5.4 10.1391 4.47188 12.5953 4.47188C13.3594 4.47188 13.9734 4.49062 14.3297 4.52812V0.370313C13.6594 0.1875 12.0187 0 11.0719 0C6.06094 0 3.75 2.36719 3.75 7.47187V9.44531H0.65625V14.0297H3.75Z"
+                            fill="#56C0CC" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_6038_7622">
+                            <rect width="15" height="24" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+            <a href="" class="BlogShearSosalIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                    <g clip-path="url(#clip0_6038_7625)">
+                        <path
+                            d="M5.0635 20H0.605134V6.64732H5.0635V20ZM2.83192 4.82589C1.40658 4.82589 0.25 3.72768 0.25 2.40179C0.25 1.76479 0.522023 1.15389 1.00623 0.703467C1.49043 0.253045 2.14715 0 2.83192 0C3.51669 0 4.17341 0.253045 4.65761 0.703467C5.14182 1.15389 5.41384 1.76479 5.41384 2.40179C5.41384 3.72768 4.25725 4.82589 2.83192 4.82589ZM21.7452 20H17.2964V13.5C17.2964 11.9509 17.2628 9.96429 14.9785 9.96429C12.6605 9.96429 12.3054 11.6473 12.3054 13.3884V20H7.85178V6.64732H12.1278V8.46875H12.1902C12.7853 7.41964 14.2394 6.3125 16.4086 6.3125C20.9198 6.3125 21.75 9.07589 21.75 12.6652V20H21.7452Z"
+                            fill="#56C0CC" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_6038_7625">
+                            <rect width="21.5" height="20" fill="white" transform="translate(0.25)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+            <a href="" class="BlogShearSosalIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path
+                        d="M18.7434 2.25H22.0527L14.8246 10.5094L23.3277 21.75H16.6715L11.4543 14.9344L5.4918 21.75H2.17773L9.90742 12.9141L1.75586 2.25H8.58086L13.2918 8.47969L18.7434 2.25ZM17.5809 19.7719H19.4137L7.58242 4.125H5.61367L17.5809 19.7719Z"
+                        fill="#56C0CC" />
+                </svg>
+            </a>
+            <a href="" class="BlogShearSosalIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="24" viewBox="0 0 21 24" fill="none">
+                    <g clip-path="url(#clip0_6038_7631)">
+                        <path
+                            d="M10.5043 6.60977C7.52305 6.60977 5.11836 9.01445 5.11836 11.9957C5.11836 14.977 7.52305 17.3816 10.5043 17.3816C13.4855 17.3816 15.8902 14.977 15.8902 11.9957C15.8902 9.01445 13.4855 6.60977 10.5043 6.60977ZM10.5043 15.4973C8.57773 15.4973 7.00273 13.927 7.00273 11.9957C7.00273 10.0645 8.57305 8.49414 10.5043 8.49414C12.4355 8.49414 14.0059 10.0645 14.0059 11.9957C14.0059 13.927 12.4309 15.4973 10.5043 15.4973ZM17.3668 6.38945C17.3668 7.08789 16.8043 7.6457 16.1105 7.6457C15.4121 7.6457 14.8543 7.0832 14.8543 6.38945C14.8543 5.6957 15.4168 5.1332 16.1105 5.1332C16.8043 5.1332 17.3668 5.6957 17.3668 6.38945ZM20.934 7.66445C20.8543 5.98164 20.4699 4.49102 19.2371 3.26289C18.009 2.03477 16.5184 1.65039 14.8355 1.56602C13.1012 1.46758 7.90273 1.46758 6.16836 1.56602C4.49023 1.6457 2.99961 2.03008 1.7668 3.2582C0.533984 4.48633 0.154297 5.97695 0.0699219 7.65977C-0.0285156 9.39414 -0.0285156 14.5926 0.0699219 16.327C0.149609 18.0098 0.533984 19.5004 1.7668 20.7285C2.99961 21.9566 4.48555 22.341 6.16836 22.4254C7.90273 22.5238 13.1012 22.5238 14.8355 22.4254C16.5184 22.3457 18.009 21.9613 19.2371 20.7285C20.4652 19.5004 20.8496 18.0098 20.934 16.327C21.0324 14.5926 21.0324 9.39883 20.934 7.66445ZM18.6934 18.1879C18.3277 19.1066 17.6199 19.8145 16.6965 20.1848C15.3137 20.7332 12.0324 20.6066 10.5043 20.6066C8.97617 20.6066 5.69023 20.7285 4.31211 20.1848C3.39336 19.8191 2.68555 19.1113 2.31523 18.1879C1.7668 16.8051 1.89336 13.5238 1.89336 11.9957C1.89336 10.4676 1.77148 7.18164 2.31523 5.80352C2.68086 4.88477 3.38867 4.17695 4.31211 3.80664C5.69492 3.2582 8.97617 3.38477 10.5043 3.38477C12.0324 3.38477 15.3184 3.26289 16.6965 3.80664C17.6152 4.17227 18.323 4.88008 18.6934 5.80352C19.2418 7.18633 19.1152 10.4676 19.1152 11.9957C19.1152 13.5238 19.2418 16.8098 18.6934 18.1879Z"
+                            fill="#56C0CC" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_6038_7631">
+                            <rect width="21" height="24" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+        </div>
+        <div class="BlogContentBody">
+            {{GetAllBlog.Body|safe}}
+        </div>
+    </div>
+    <div class="DetailsBlogWiaz">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username"
+                aria-describedby="basic-addon2">
+            <span class="input-group-text" id="basic-addon2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+            </span>
+        </div>
+
+        <div class="RecentPost mt-4">
+            <h4 class="RecentPostTitel">
+                Recent Post
+            </h4>
+            {% for i in "1111" %}
+            <div class="RecentPostCard">
+                <img class="RecentPostCardImages" src="{% static 'images/Assets/avater.webp' %}" alt="" loading="lazy">
+                <div class="RecentPostCardContent">
+                    <p class="RecentPostCardTitel">
+                        Smart home devices for a cooler, more intelligent
+                    </p>
+                    <p class="RecentPostCardPostDate">
+                        02-06-2025
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="RecentPost mt-5">
+            <h4 class="RecentPostTitel">
+                Popular Post
+            </h4>
+            {% for i in "1111" %}
+            <div class="RecentPostCard">
+                <img class="RecentPostCardImages" src="{% static 'images/Assets/avater.webp' %}" alt="" loading="lazy">
+                <div class="RecentPostCardContent">
+                    <p class="RecentPostCardTitel">
+                        Smart home devices for a cooler, more intelligent
+                    </p>
+                    <p class="RecentPostCardPostDate">
+                        02-06-2025
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

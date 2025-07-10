@@ -1,0 +1,477 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+{% block title %}Ray Advertising LLC{% endblock %}
+{% block body %}
+<div class="HeroSection HeroSectionPublisher">
+    <img class="HeroSectionBG" src="{% static 'images/Assets/Hero-bg.webp' %}" alt="heroBg" loading="lazy">
+    <div class="falingSterWaper">
+        <span class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span>
+    </div>
+    <div class='woldWaper'>
+        <img class="wold" src="{% static 'images/Assets/Globe.webp' %}" alt="wold" loading="lazy">
+    </div>
+    <div class="Overlay"></div>
+    <img class="carv" src="{% static 'images/Assets/carv.webp' %}" alt="carv" loading="lazy">
+    <div class="PublishHeroContent container">
+        <h1 class="PublisherheroHeader">Advertiser</h1>
+        <p class="HeroText">
+            We help your business grow in multiple verticals with a smart, effective performance marketing system so
+            that you can connect your targeted audience who really wants to buy.
+        </p>
+        <div class="heroButtonWaper heroButtonWaperSingel">
+            <a href="https://rayadvertising.everflowclient.io/advertiser/signup"><button
+                    class="slide_from_top heroButton1 PublisherHeroButton">GET AN ACCOUNT</button></a>
+        </div>
+        <div class="counterBoxPublisher">
+            <div class="counter">
+                <h3>300K+</h3>
+                <p>Active Campaign</p>
+            </div>
+            <div class="counter">
+                <h3>4K+</h3>
+                <p>Affiliate</p>
+            </div>
+            <div class="counter">
+                <h3>10K+</h3>
+                <p>Sponsor</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="Security container">
+    <div class="SecurityWaper">
+        <h1 class="SecurityTitel">Security</h1>
+        <p class="SecurityText">Brand safety is paramount</p>
+        <div class="SecurityCardWaper">
+            <div class="SecurityCard">
+                <div>
+                    <div class="SecurityCardIcon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="34" viewBox="0 0 40 34" fill="none">
+                            <path
+                                d="M35.7143 0H4.2857C1.92283 0 0 1.90684 0 4.24998V21.25C0 23.5932 1.92283 25.5 4.2857 25.5H14.2857V31.1667H9.99998C9.21101 31.1667 8.5714 31.8009 8.5714 32.5833C8.5714 33.3657 9.21101 34 9.99998 34H30C30.789 34 31.4286 33.3657 31.4286 32.5833C31.4286 31.8009 30.789 31.1667 30 31.1667H25.7143V25.5H35.7143C38.0772 25.5 40 23.5932 40 21.25V4.24998C40 1.90684 38.0772 0 35.7143 0ZM20 5.66665L23.5714 14.1667L20 12.75L16.4286 14.1667L20 5.66665ZM22.8572 31.1667H17.1428V25.5H22.8572V31.1667ZM37.1429 21.25C37.1429 22.0324 36.5033 22.6667 35.7143 22.6667H4.2857C3.49673 22.6667 2.85712 22.0324 2.85712 21.25V19.8333H37.1429V21.25Z"
+                                fill="#00BCD0" />
+                        </svg>
+                    </div>
+                    <h3 class="SecurityCardTitel">
+                        Direct monitoring
+                    </h3>
+                    <p class="SecurityCardText">
+                        Our dedicated in-house team keeps your campaign procedure under strict 24/7 monitoring to ensure
+                        100% compliance with your specifications.
+                    </p>
+                </div>
+            </div>
+            <div class="SecurityCard">
+                <div>
+                    <div class="SecurityCardIcon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+                            <path
+                                d="M37.9466 41.4969C38.1383 41.6885 38.2438 41.9436 38.2438 42.2153C38.2438 42.487 38.1383 42.742 37.9467 42.9336C37.7551 43.1252 37.4999 43.2309 37.2282 43.2309C36.9564 43.2309 36.7014 43.1254 36.5095 42.9334C36.364 42.787 34.9074 41.1662 32.5132 38.4863L32.3901 38.3486L32.5338 38.2325C32.7986 38.0186 33.0508 37.7846 33.2835 37.5372L33.4009 37.4124L33.5286 37.5266C36.1907 39.9051 37.8009 41.352 37.9466 41.497V41.4969ZM31.9941 16.2016C31.9941 18.461 33.8322 20.2991 36.0916 20.2991C38.3509 20.2991 40.189 18.4609 40.189 16.2016C40.189 13.9423 38.3509 12.1041 36.0916 12.1041C33.8322 12.1041 31.9941 13.9423 31.9941 16.2016ZM34.2476 32.4513C34.2476 35.9668 31.3877 38.8268 27.8723 38.8268C24.3569 38.8268 21.4969 35.9668 21.4969 32.4513C21.4969 28.9359 24.3568 26.076 27.8723 26.076C31.3877 26.076 34.2476 28.936 34.2476 32.4513ZM33.376 32.4513C33.376 29.4166 30.9071 26.9476 27.8723 26.9476C24.8375 26.9476 22.3686 29.4166 22.3686 32.4513C22.3686 35.4861 24.8375 37.9551 27.8723 37.9551C30.9071 37.9551 33.376 35.4861 33.376 32.4513ZM32.3213 32.4513C32.3213 34.9045 30.3255 36.9004 27.8723 36.9004C25.4191 36.9004 23.4233 34.9045 23.4233 32.4513C23.4233 29.9981 25.4191 28.0023 27.8723 28.0023C30.3255 28.0023 32.3213 29.9981 32.3213 32.4513ZM30.6045 31.3495C30.5048 31.2499 30.3723 31.1951 30.2315 31.1951C30.0907 31.1951 29.9583 31.2499 29.8586 31.3495L27.3005 33.9078L25.8859 32.4933C25.7863 32.3937 25.6538 32.3388 25.513 32.3388C25.3722 32.3388 25.2398 32.3937 25.1401 32.4934C25.0405 32.593 24.9857 32.7254 24.9857 32.8662C24.9857 33.007 25.0405 33.1394 25.1402 33.2391L26.9276 35.0265C27.0272 35.126 27.1597 35.1809 27.3005 35.1809C27.4413 35.1809 27.5737 35.126 27.6734 35.0265L30.6046 32.0952C30.8101 31.8895 30.8101 31.555 30.6046 31.3495L30.6045 31.3495ZM39.2095 20.3703L39.1348 20.3553L39.0728 20.3994C38.1964 21.0237 37.1655 21.3537 36.0916 21.3537C35.0176 21.3537 33.9864 21.0236 33.11 20.3992L33.048 20.355L32.9732 20.37C30.6891 20.8303 29.3257 21.8662 28.8051 23.5369L28.7648 23.6661L28.8793 23.738C29.6319 24.2108 30.2297 24.8121 30.6561 25.525L30.6858 25.5744L30.7389 25.5968C32.7345 26.4345 34.2642 28.0929 34.9359 30.1469L34.9755 30.268H42.7136C43.2119 30.268 43.6174 29.8625 43.6174 29.3641V25.2644C43.6174 22.5299 42.2167 20.9748 39.2094 20.3702L39.2095 20.3703ZM14.0605 16.2016C14.0605 17.3209 13.7063 18.386 13.0358 19.2819L12.8842 19.4846L13.1271 19.5559C13.4811 19.66 13.8184 19.7816 14.1295 19.9178L14.1633 19.9325H17.1488L17.1345 19.7434C17.1227 19.5872 17.1172 19.4565 17.1172 19.3318C17.1172 16.3637 19.532 13.9489 22.5001 13.9489C22.5629 13.9489 22.6251 13.9513 22.6873 13.9535L22.9195 13.9621L22.8791 13.746C22.5067 11.7564 21.0986 10.5425 18.5743 10.0348L18.4995 10.0198L18.4376 10.0639C17.5611 10.6882 16.5303 11.0182 15.4563 11.0182C14.3824 11.0182 13.3511 10.688 12.4744 10.0635L12.4123 10.0193L12.3375 10.0344C11.4399 10.2158 10.6677 10.4956 10.0424 10.8659L9.66716 11.0881L10.0916 11.1882C12.4284 11.7397 14.0605 13.8013 14.0605 16.2017V16.2016ZM29.5438 9.96348C31.8031 9.96348 33.6413 8.12533 33.6413 5.86602C33.6413 3.6067 31.8031 1.76855 29.5438 1.76855C27.2845 1.76855 25.4463 3.6067 25.4463 5.86602C25.4463 8.12533 27.2845 9.96348 29.5438 9.96348ZM15.4562 9.96348C17.7155 9.96348 19.5536 8.12533 19.5536 5.86602C19.5536 3.6067 17.7155 1.76855 15.4562 1.76855C13.1968 1.76855 11.3587 3.6067 11.3587 5.86602C11.3587 8.12533 13.1968 9.96348 15.4562 9.96348ZM23.9875 14.0469L24.0004 14.1605L24.1094 14.1948C26.3665 14.9035 27.8828 16.9679 27.8828 19.3317C27.8828 19.4563 27.8774 19.5871 27.8655 19.7432L27.8512 19.9323H30.8363L30.8701 19.9175C31.1809 19.7816 31.5184 19.6597 31.8729 19.5555L32.1157 19.4841L31.964 19.2816C31.2938 18.3857 30.9395 17.3206 30.9395 16.2015C30.9395 13.801 32.5718 11.7392 34.909 11.188L35.3333 11.0879L34.9582 10.8657C34.3343 10.4961 33.5616 10.2165 32.6616 10.0348L32.5869 10.0197L32.5249 10.0639C31.6485 10.6882 30.6176 11.0181 29.5437 11.0181C28.4698 11.0181 27.4387 10.688 26.5623 10.0637L26.5002 10.0195L26.4254 10.0346C25.0514 10.3124 23.9882 10.8127 23.2652 11.5217L23.166 11.6189L23.2376 11.7378C23.6368 12.401 23.8891 13.1779 23.9874 14.0469H23.9875ZM8.90831 20.2991C11.1676 20.2991 13.0058 18.4609 13.0058 16.2016C13.0058 13.9423 11.1676 12.1041 8.90831 12.1041C6.64899 12.1041 4.81085 13.9423 4.81085 16.2016C4.81085 18.4609 6.64899 20.2991 8.90831 20.2991ZM20.4422 32.4513C20.4422 28.3544 23.7754 25.0213 27.8723 25.0213C28.0243 25.0213 28.1838 25.0266 28.3466 25.037L28.9926 25.0781L28.4562 24.7159C27.7515 24.2402 26.8706 23.9013 25.7629 23.68L25.6881 23.6651L25.6261 23.7095C24.7081 24.3671 23.6271 24.7148 22.4999 24.7148C21.3727 24.7148 20.2915 24.3671 19.3732 23.7093L19.3111 23.6649L19.2363 23.6799C16.0543 24.3149 14.5722 25.9567 14.5722 28.8469V33.1512C14.5722 33.6889 15.0098 34.1265 15.5475 34.1265H20.6297L20.5875 33.916C20.4911 33.4357 20.4422 32.943 20.4422 32.4515V32.4513ZM16.1202 23.7369L16.235 23.665L16.1946 23.5355C15.673 21.8658 14.3096 20.8304 12.0265 20.3703L11.9518 20.3552L11.8897 20.3994C11.0133 21.0238 9.98233 21.3538 8.90831 21.3538C7.83429 21.3538 6.80271 21.0236 5.92609 20.3988L5.86404 20.3547L5.78942 20.3696C2.78277 20.973 1.38232 22.5284 1.38232 25.2645V29.3643C1.38232 29.8627 1.78776 30.2681 2.2861 30.2681H13.5175V28.8468C13.5175 27.0253 14.0673 25.5612 15.1518 24.495C15.4331 24.2183 15.7589 23.9632 16.1201 23.7369H16.1202ZM22.5 15.0035C20.1134 15.0035 18.1718 16.9451 18.1718 19.3317C18.1718 21.7184 20.1134 23.66 22.5 23.66C24.8866 23.66 26.8282 21.7184 26.8282 19.3317C26.8282 16.9451 24.8866 15.0035 22.5 15.0035Z"
+                                fill="#00BCD0" />
+                        </svg>
+                    </div>
+                    <h3 class="SecurityCardTitel">
+                        Affiliate screening
+                    </h3>
+                    <p class="SecurityCardText">
+                        Affiliates must go through a constructive process of performance audits, history checks, and
+                        alignment with your brand guidelines before finally integrated with our CRM Network.
+                    </p>
+                </div>
+            </div>
+            <div class="SecurityCard">
+                <div>
+                    <div class="SecurityCardIcon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <path
+                                d="M34.9453 28.1953H24.0619L22.9645 29.2927C22.7667 29.4905 22.4985 29.6016 22.2188 29.6016H13.7812C13.5015 29.6016 13.2332 29.4905 13.0354 29.2926L11.9381 28.1953H1.05469C0.472219 28.1953 0 28.6675 0 29.25C0 31.7741 2.04616 33.8203 4.57031 33.8203H31.4297C33.9538 33.8203 36 31.7741 36 29.25C36 28.6675 35.5278 28.1953 34.9453 28.1953Z"
+                                fill="#00BCD0" />
+                            <path
+                                d="M18 21.4016C21.2186 19.7764 23.2734 16.4627 23.2734 12.831V9.20565C19.7316 7.79343 16.2684 7.79343 12.7266 9.20565V12.831C12.7266 16.4627 14.7814 19.7764 18 21.4016ZM15.0169 14.0884C15.4288 13.6765 16.0966 13.6765 16.5085 14.0884L17.2542 14.8342L19.4915 12.5968C19.9034 12.1849 20.5711 12.1849 20.983 12.5968C21.3949 13.0087 21.3949 13.6765 20.983 14.0884L18 17.0714C17.5881 17.4833 16.9204 17.4833 16.5085 17.0714L15.0169 15.5798C14.605 15.168 14.605 14.5003 15.0169 14.0884Z"
+                                fill="#00BCD0" />
+                            <path
+                                d="M13.4297 26.7038L14.2182 27.4922H21.7819L22.5702 26.7038C22.9659 26.3082 23.5024 26.0859 24.0619 26.0859H34.5938V5.34375C34.5938 3.59909 33.1744 2.17969 31.4297 2.17969H4.57031C2.82565 2.17969 1.40625 3.59909 1.40625 5.34375V26.0859H11.9381C12.4976 26.0859 13.0341 26.3082 13.4297 26.7038ZM10.6172 8.50648C10.6172 8.08966 10.8626 7.71195 11.2435 7.5427C15.7268 5.55012 20.2732 5.55012 24.7565 7.5427C25.1374 7.71195 25.3828 8.08966 25.3828 8.50648V12.8315C25.3828 17.4547 22.6531 21.6551 18.4283 23.5327C18.1557 23.654 17.8443 23.654 17.5717 23.5327C13.3469 21.6551 10.6172 17.4546 10.6172 12.8315V8.50648Z"
+                                fill="#00BCD0" />
+                        </svg>
+                    </div>
+                    <h3 class="SecurityCardTitel">
+                        Anti-fraud software
+                    </h3>
+                    <p class="SecurityCardText">
+                        To verify your lead quality, we have advanced Anti-fraud detecting software that cleanse/remove
+                        click fraud, proxy traffic, and fake leads, safeguarding your ad spend.
+                    </p>
+                </div>
+            </div>
+            <div class="SecurityCard">
+                <div>
+                    <div class="SecurityCardIcon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10.5971 26.9324C10.8491 26.6804 11.2577 26.6804 11.5097 26.9324C11.7617 27.1844 11.7617 27.593 11.5097 27.845C8.95816 30.3966 8.95806 34.5336 11.5097 37.0852C11.7617 37.3372 11.7617 37.7458 11.5097 37.9978C11.2577 38.2498 10.8491 38.2498 10.5971 37.9978C7.54136 34.942 7.54146 29.9882 10.5971 26.9324ZM26.6668 43.4723H23.334C23.2866 43.4723 23.248 43.5109 23.248 43.5583V43.9693C23.248 45.5051 25.1238 46.3201 26.2375 45.2064C26.5554 44.8885 26.7527 44.4505 26.7527 43.9693V43.5583C26.7528 43.5109 26.7142 43.4723 26.6668 43.4723ZM34.5587 39.9322H15.4421C14.4582 39.9322 13.9325 41.1349 14.6483 41.8507C14.8524 42.0548 15.1335 42.1816 15.4421 42.1816H34.5586C35.5425 42.1816 36.0681 40.9789 35.3524 40.2631C35.1483 40.0589 34.8673 39.9322 34.5587 39.9322ZM25.0004 24.8425C20.6837 24.8425 17.1495 28.3767 17.1495 32.6933V38.5554C17.1495 38.6028 17.1881 38.6414 17.2355 38.6414H32.7652C32.8126 38.6414 32.8512 38.6028 32.8512 38.5554V32.6933C32.8513 28.3767 29.3171 24.8425 25.0004 24.8425ZM24.9403 4.33959C24.9506 4.30529 24.9793 4.28189 25.015 4.27869C25.0507 4.27549 25.083 4.29339 25.0993 4.32529C25.7642 5.62899 26.1207 6.94439 26.1231 8.27309C26.1277 10.8088 24.4382 13.4303 24.4382 16.3436C24.4382 17.7445 25.5739 18.8803 26.9749 18.8803C28.3758 18.8803 29.5116 17.7446 29.5116 16.3436C29.5116 15.4905 28.7625 13.932 28.4108 13.1261C28.3957 13.0916 28.404 13.0532 28.4319 13.0279C28.4597 13.0027 28.4984 12.9981 28.5313 13.0162C32.203 15.0494 36.4295 22.338 36.4295 26.6554C36.4295 29.2258 35.6401 31.6051 34.2989 33.5468C34.2772 33.5783 34.239 33.5914 34.2025 33.58C34.1659 33.5686 34.142 33.5361 34.142 33.4978V32.6932C34.142 27.664 30.0296 23.5516 25.0004 23.5516C19.9712 23.5516 15.8588 27.664 15.8588 32.6932V33.4978C15.8588 33.5361 15.8349 33.5686 15.7983 33.58C15.7618 33.5914 15.7237 33.5782 15.7019 33.5468C14.3608 31.6051 13.5713 29.2258 13.5713 26.6554C13.5714 19.3014 22.3622 12.8915 24.9403 4.33959ZM40.8856 25.4505C40.6336 25.1985 40.6336 24.7899 40.8856 24.5379C41.1376 24.2859 41.5462 24.2859 41.7982 24.5379C46.1764 28.9161 46.1763 36.0142 41.7982 40.3923C41.5462 40.6443 41.1376 40.6443 40.8856 40.3923C40.6336 40.1403 40.6336 39.7317 40.8856 39.4797C44.7596 35.6058 44.7596 29.3244 40.8856 25.4505ZM38.4911 27.845C41.0426 30.3966 41.0427 34.5336 38.4911 37.0852C38.2391 37.3372 38.2391 37.7458 38.4911 37.9978C38.7431 38.2498 39.1517 38.2498 39.4037 37.9978C42.4594 34.9421 42.4594 29.9882 39.4037 26.9325C39.1517 26.6805 38.7431 26.6805 38.4911 26.9325C38.2391 27.1844 38.2391 27.593 38.4911 27.845ZM8.20256 24.5379C3.82436 28.9161 3.82446 36.0142 8.20256 40.3923C8.45456 40.6443 8.86316 40.6443 9.11516 40.3923C9.36716 40.1403 9.36716 39.7317 9.11516 39.4797C5.24116 35.6057 5.24116 29.3244 9.11516 25.4504C9.36716 25.1984 9.36716 24.7898 9.11516 24.5378C8.86316 24.2859 8.45456 24.2859 8.20256 24.5379Z"
+                                fill="#00BCD0" />
+                        </svg>
+                    </div>
+                    <h3 class="SecurityCardTitel">
+                        Alert system
+                    </h3>
+                    <p class="SecurityCardText">
+                        Irregularities in traffic flow or low call durations are flagged by algorithms and trigger
+                        instant alerts for rapid resolution.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="trafficPatner publishertrafficPatner">
+    <h1 class="trafficPatnerTitle">Traffic partners</h1>
+    <div class="trafficPatnerWaper">
+        <div class="trafficPatnerWaperItem">
+            {% for i in "11" %}
+            {% for j in getTrafficImages %}
+            <img src="{{j.image}}" alt="" class="trafficPatnerImage" loading="lazy">
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="VerticalsBenefits ">
+    <img class="VerticalsBenefitsBG" src="{% static 'images/Assets/CorePerformance.webp' %}" alt="verticals.webp"
+        loading="lazy">
+    <div class="VerticalsBenefitsCardWaper container" data-aos="zoom-in">
+        <div class="VerticalsBenefitsCard">
+            <h1 class="VerticalsBenefitsCardTitel">Our Top Verticals</h1>
+            <p class="VerticalsBenefitsCardText">
+                Maximize ROI in high-trending niche verticals like: home services, insurance, legal, healthcare and
+                Nutra.
+            </p>
+            <table>
+                <tr>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Insurance
+                    </td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Home Improvement
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Legal
+                    </td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Finance
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Sweeps
+                    </td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Nutra
+                    </td>
+                </tr>
+            </table>
+            <a href="https://rayadvertising.everflowclient.io/advertiser/signup">
+            <button class="slide_from_top heroButton1">GET AN ACCOUNT</button>
+            </a>
+        </div>
+        <div class="VerticalsBenefitsCard">
+            <h1 class="VerticalsBenefitsCardTitel">Traffic Types</h1>
+            <p class="VerticalsBenefitsCardText">
+                Affiliates display ads with a unique tracking number (CTN) in Ads, that instantly connect to the
+                advertisers, once customers make calls.
+            </p>
+            <table>
+                <tr>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        search
+                    </td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Social
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Native
+                    </td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Email
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                       display
+                    </td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        retargeting
+                    </td>
+                </tr>
+            </table>
+            <a href="https://rayadvertising.everflowclient.io/advertiser/signup">
+            <button class="slide_from_top heroButton1">SIGN UP NOW</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="trafficPatner publishertrafficPatner featuredIn">
+    <h1 class="trafficPatnerTitle">Featured In</h1>
+    <div class="trafficPatnerWaper">
+        <div class="trafficPatnerWaperItem">
+            {% for i in "11" %}
+            {% for j in getFeaturedImages %}
+            <img src="{{j.image}}" alt="" class="trafficPatnerImage" loading="lazy">
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="proudlySponsoring">
+    <img class="proudlySponsoringBG" src="{% static 'images/Assets/proudlySponsoring.webp' %}"
+        alt="proudlySponsoring.webp" loading='lazy'>
+    <div class="container">
+        <h1 class="proudlySponsoringHeader">Proudly Sponsoring</h1>
+        <p class="proudlySponsoringText">
+            At Ray Advertising, we take pride in more than just partnerships. We proudly sponsor and support innovative
+            industry events, tech events, affiliate search engine platforms, and similar initiatives that share our
+            vision for success.
+        </p>
+        <div class="proudlySponsoringWaper">
+            {% for proudly in getProudly|slice:'0:3' %}
+            <div class="proudlySponsoringCard">
+                <div class="proudlySponsoringCardTitel mb-3">
+                    <img src="{{proudly.Icon.url}}" alt="{{proudly.Icon}}" loading="lazy">
+                    <h5 class="ms-3">{{proudly.Titel}}</h5>
+                </div>
+                <p class="proudlySponsoringCardText">
+                    {{proudly.Description|slice:'0:150'}} ...
+                </p>
+                <a href="{{proudly.ButtonLink}}">
+                    <button class="slide_from_left proudlySponsoringCardButton">
+                        Learn More
+                    </button>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="imagesGalary crouselForPc container">
+    <div class="imagesGalaryHeader">
+        <div class="imagesGalaryHeaderTitel"><img src="{% static 'images/Assets/gallery.svg' %}" alt="" class="me-2"
+                loading="lazy">From Our gallery</div>
+        <a href="{% url 'gallery' %}">
+            <button class="slide_from_left imagesGalaryButton">
+                Learn More
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg>
+            </button>
+        </a>
+    </div>
+    <div class="imagesGalaryCrasul">
+        <div id="carouselExampleIndicatorsPC" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button class="slider_nav active" type="button" data-bs-target="#carouselExampleIndicatorsPC"
+                    data-bs-slide-to="0" aria-current="true" aria-label="Slide 0"></button>
+                {% for i in sliderCunterNumber %}
+                <button class="slider_nav" type="button" data-bs-target="#carouselExampleIndicatorsPC"
+                    data-bs-slide-to="{{forloop.counter}}" aria-label="{{forloop.counter}}"></button>
+                {% endfor %}
+
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <div class="galleryCardImagesWaper mt-5">
+                        {% for slide in getGalleryImages %}
+                        <!-- <h1>{{forloop.counter}}</h1> -->
+                        <img class="galleryCardImagesImages" src="{{slide.image}}" alt="image" loading="lazy">
+
+                        {% if forloop.counter|divisibleby:4 and forloop.counter > 0 and not forloop.last %}
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="galleryCardImagesWaper mt-5">
+                        {% else %}
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <button style="display: none;" class="carousel-control-prev" type="button"
+                data-bs-target="#carouselExampleIndicatorsPC" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button style="display: none;" class="carousel-control-next" type="button"
+                data-bs-target="#carouselExampleIndicatorsPC" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="imagesGalary crouselForMobile container">
+    <div class="imagesGalaryHeader">
+        <div class="imagesGalaryHeaderTitel"><img src="{% static 'images/Assets/gallery.svg' %}" alt="" class="me-2"
+                loading="lazy">From Our gallery</div>
+    </div>
+    <div class="imagesGalaryCrasul">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button class="slider_nav active" type="button" data-bs-target="#carouselExampleIndicatorsPC"
+                    data-bs-slide-to="0" aria-current="true" aria-label="Slide 0"></button>
+                {% for i in Mobile_sliderCunterNumber %}
+                <button class="slider_nav" type="button" data-bs-target="#carouselExampleIndicatorsPC"
+                    data-bs-slide-to="{{forloop.counter}}" aria-label="{{forloop.counter}}"></button>
+                {% endfor %}
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <div class="galleryCardImagesWaper mt-3">
+                        {% for slide in getGalleryImages %}
+                        <img class="galleryCardImagesImages" src="{{slide.image}}" alt="" loading="lazy">
+                        {% if forloop.counter|divisibleby:2 and forloop.counter > 0 and not forloop.last %}
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="galleryCardImagesWaper mt-3">
+                        {% else %}
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+            <button style="display: none;" class="carousel-control-prev" type="button"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button style="display: none;" class="carousel-control-next" type="button"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <a href="{% url 'gallery' %}" class="mt-3">
+        <button class="slide_from_left imagesGalaryButton">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+        </button>
+    </a>
+</div>
+<div class="ReadyTOTransfrom">
+    <img class="ReadyTOTransfromBG" src="{% static 'images/Assets/ReadyTOTransfrom.webp' %}" alt="ReadyTOTransfrom.webp"
+        loading='lazy'>
+    <div class="ReadyTOTransfromContentBox container" data-aos="zoom-in-up">
+        <div class="ReadyTOTransfromContentWaper">
+            <h1>Advertiser of Ray Advertising have the flexibility to choose the campaigns that align with their audience and niche</h1>
+        </div>
+        <div class="ReadyTOTransfromButtonWaper">
+              <a href="https://rayadvertising.everflowclient.io/advertiser/signup">
+                <button class="ReadyTOTransfromButton2">
+                    Get started
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="ourBlog container">
+    <h1 class="ourBlogTitel">Our latest blog</h1>
+    <div class="ourBlogWaper">
+        {% for blog in getAllBlog|slice:"0:2" %}
+        <div class="ourBlogCard">
+            <img src="{{blog.Images}}" alt="images" loading="lazy" class="ourBlogCardImages">
+            <P class="ourBlogCardText">
+                Journey Through LeadsCon 2024: Insights, Innovations, and Unforgettable Moments
+            </P>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="{% url 'events' %}" class="mt-4 d-flex justify-content-center">
+        <button class="slide_from_left imagesGalaryButton">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+        </button>
+    </a>
+</div>
+{% endblock %}

@@ -1,0 +1,407 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+{% block title %}Ray Advertising LLC{% endblock %}
+{% block body %}
+<div class="HeroSection HeroSectionPublisher">
+    <img class="HeroSectionBG" src="{% static 'images/Assets/Hero-bg.webp' %}" alt="heroBg" loading="lazy">
+    <div class="falingSterWaper">
+        <span class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span>
+    </div>
+    <div class='woldWaper'>
+        <img class="wold" src="{% static 'images/Assets/Globe.webp' %}" alt="wold" loading="lazy">
+    </div>
+    <div class="Overlay"></div>
+    <img class="carv" src="{% static 'images/Assets/carv.webp' %}" alt="carv" loading="lazy">
+    <div class="PublishHeroContent container">
+        <h1 class="PublisherheroHeader">Publisher</h1>
+        <p class="HeroText">
+            We help your business in multiple verticals with effective performance marketing campaigns so that you reach
+            your targeted audience like nobody else. We deal with your business challenges and unite hands as your
+            growth partner.
+        </p>
+        <div class="heroButtonWaper">
+            <a href="https://rayadvertising.everflowclient.io/affiliate/signup"><button
+                    class="slide_from_top heroButton1 PublisherHeroButton">GET AN ACCOUNT</button></a>
+        </div>
+        <div class="counterBoxPublisher">
+            <div class="counter">
+                <h3>300K+</h3>
+                <p>Active Campaign</p>
+            </div>
+            <div class="counter">
+                <h3>4K+</h3>
+                <p>Affiliate</p>
+            </div>
+            <div class="counter">
+                <h3>10K+</h3>
+                <p>Sponsor</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="PerformanceModels container">
+    <div class="PerformanceModelsContent">
+        <h1 class="PerformanceModelsTitel">Performance Models</h1>
+        <p class="PerformanceModelsText">
+            We help your business in multiple verticals with effective performance marketing campaigns so that you reach
+            your targeted audience like nobody else. We deal with your business challenges and unite hands as your
+            growth partner.
+        </p>
+        <a href="https://rayadvertising.everflowclient.io/affiliate/signup"><button
+                class="slide_from_top heroButton1">GET AN ACCOUNT</button></a>
+    </div>
+    <div class="PerformanceModelsImages">
+        <img src="{% static 'images/Assets/pe.webp' %}" alt="">
+    </div>
+</div>
+<div class="trafficPatner publishertrafficPatner">
+    <h1 class="trafficPatnerTitle">Traffic partners</h1>
+    <div class="trafficPatnerWaper">
+        <div class="trafficPatnerWaperItem">
+            {% for i in "11" %}
+            {% for j in getTrafficImages %}
+            <img src="{{j.image}}" alt="" class="trafficPatnerImage" loading="lazy">
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="VerticalsBenefits ">
+    <img class="VerticalsBenefitsBG" src="{% static 'images/Assets/CorePerformance.webp' %}" alt="verticals.webp"
+        loading="lazy">
+    <div class="VerticalsBenefitsCardWaper container" data-aos="zoom-in">
+        <div class="VerticalsBenefitsCard">
+            <h1 class="VerticalsBenefitsCardTitel">Our Top Verticals</h1>
+            <p class="VerticalsBenefitsCardText">
+                Affiliates display ads with a unique phone number, and when a customer calls, they are instantly
+                connected to your sales team or call center.
+            </p>
+            <table>
+                <tr>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Insurance
+                    </td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Home Improvement
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Legal
+                    </td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Finance
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Sweeps
+                    </td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Nutra
+                    </td>
+                </tr>
+            </table>
+             <a href="https://rayadvertising.everflowclient.io/affiliate/signup">
+            <button class="slide_from_top heroButton1">GET AN ACCOUNT</button>
+            </a>
+        </div>
+        <div class="VerticalsBenefitsCard">
+            <h1 class="VerticalsBenefitsCardTitel">Perks & Benefits</h1>
+            <p class="VerticalsBenefitsCardText">
+                Affiliates display ads with a unique phone number, and when a customer calls, they are instantly
+                connected to your sales team or call center.
+            </p>
+            <table>
+                <tr>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                       Competitive payouts
+                    </td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Easy API integration
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Compliance support
+                    </td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Diverse Offer Selection
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                       Multiple verticals
+                    </td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.0375 12.75L14.2 18.575C14.025 18.7625 13.7875 18.85 13.5375 18.85C13.3 18.85 13.0625 18.7625 12.875 18.575L9.9625 15.6625C9.6 15.3 9.6 14.7 9.9625 14.3375C10.325 13.975 10.925 13.975 11.2875 14.3375L13.5375 16.5875L18.7125 11.425C19.075 11.05 19.675 11.05 20.0375 11.425C20.4 11.7875 20.4 12.375 20.0375 12.75Z"
+                                fill="#00BCD0" />
+                        </svg>
+                        Comprehensive Tools
+                    </td>
+                </tr>
+            </table>
+            <a href="https://rayadvertising.everflowclient.io/affiliate/signup">
+            <button class="slide_from_top heroButton1">SIGN UP NOW</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="trafficPatner publishertrafficPatner featuredIn">
+    <h1 class="trafficPatnerTitle">Featured In</h1>
+    <div class="trafficPatnerWaper">
+        <div class="trafficPatnerWaperItem">
+            {% for i in "11" %}
+            {% for j in getFeaturedImages %}
+            <img src="{{j.image}}" alt="" class="trafficPatnerImage" loading="lazy">
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="proudlySponsoring">
+    <img class="proudlySponsoringBG" src="{% static 'images/Assets/proudlySponsoring.webp' %}"
+        alt="proudlySponsoring.webp" loading='lazy'>
+    <div class="container">
+        <h1 class="proudlySponsoringHeader">Proudly Sponsoring</h1>
+        <p class="proudlySponsoringText">
+            At Ray Advertising, we take pride in more than just partnerships. We proudly sponsor and support innovative
+            industry events, tech events, affiliate search engine platforms, and similar initiatives that share our
+            vision for success.
+        </p>
+        <div class="proudlySponsoringWaper">
+            {% for proudly in getProudly|slice:'0:3' %}
+            <div class="proudlySponsoringCard">
+                <div class="proudlySponsoringCardTitel mb-3">
+                    <img src="{{proudly.Icon.url}}" alt="{{proudly.Icon}}" loading="lazy">
+                    <h5 class="ms-3">{{proudly.Titel}}</h5>
+                </div>
+                <p class="proudlySponsoringCardText">
+                    {{proudly.Description|slice:'0:150'}} ...
+                </p>
+                <a href="{{proudly.ButtonLink}}">
+                    <button class="slide_from_left proudlySponsoringCardButton">
+                        Learn More
+                    </button>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="imagesGalary crouselForPc container">
+    <div class="imagesGalaryHeader">
+        <div class="imagesGalaryHeaderTitel"><img src="{% static 'images/Assets/gallery.svg' %}" alt="" class="me-2"
+                loading="lazy">From Our gallery</div>
+        <a href="{% url 'gallery' %}">
+            <button class="slide_from_left imagesGalaryButton">
+                Learn More
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg>
+            </button>
+        </a>
+    </div>
+    <div class="imagesGalaryCrasul">
+        <div id="carouselExampleIndicatorsPC" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button class="slider_nav active" type="button" data-bs-target="#carouselExampleIndicatorsPC"
+                    data-bs-slide-to="0" aria-current="true" aria-label="Slide 0"></button>
+                {% for i in sliderCunterNumber %}
+                <button class="slider_nav" type="button" data-bs-target="#carouselExampleIndicatorsPC"
+                    data-bs-slide-to="{{forloop.counter}}" aria-label="{{forloop.counter}}"></button>
+                {% endfor %}
+
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <div class="galleryCardImagesWaper mt-5">
+                        {% for slide in getGalleryImages %}
+                        <!-- <h1>{{forloop.counter}}</h1> -->
+                        <img class="galleryCardImagesImages" src="{{slide.image}}" alt="image" loading="lazy">
+
+                        {% if forloop.counter|divisibleby:4 and forloop.counter > 0 and not forloop.last %}
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="galleryCardImagesWaper mt-5">
+                        {% else %}
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <button style="display: none;" class="carousel-control-prev" type="button"
+                data-bs-target="#carouselExampleIndicatorsPC" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button style="display: none;" class="carousel-control-next" type="button"
+                data-bs-target="#carouselExampleIndicatorsPC" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="imagesGalary crouselForMobile container">
+    <div class="imagesGalaryHeader">
+        <div class="imagesGalaryHeaderTitel"><img src="{% static 'images/Assets/gallery.svg' %}" alt="" class="me-2"
+                loading="lazy">From Our gallery</div>
+    </div>
+    <div class="imagesGalaryCrasul">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button class="slider_nav active" type="button" data-bs-target="#carouselExampleIndicatorsPC"
+                    data-bs-slide-to="0" aria-current="true" aria-label="Slide 0"></button>
+                {% for i in Mobile_sliderCunterNumber %}
+                <button class="slider_nav" type="button" data-bs-target="#carouselExampleIndicatorsPC"
+                    data-bs-slide-to="{{forloop.counter}}" aria-label="{{forloop.counter}}"></button>
+                {% endfor %}
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <div class="galleryCardImagesWaper mt-3">
+                        {% for slide in getGalleryImages %}
+                        <img class="galleryCardImagesImages" src="{{slide.image}}" alt="" loading="lazy">
+                        {% if forloop.counter|divisibleby:2 and forloop.counter > 0 and not forloop.last %}
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="galleryCardImagesWaper mt-3">
+                        {% else %}
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+            <button style="display: none;" class="carousel-control-prev" type="button"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button style="display: none;" class="carousel-control-next" type="button"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <a href="{% url 'gallery' %}" class="mt-3">
+        <button class="slide_from_left imagesGalaryButton">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+        </button>
+    </a>
+</div>
+<div class="ReadyTOTransfrom">
+    <img class="ReadyTOTransfromBG" src="{% static 'images/Assets/ReadyTOTransfrom.webp' %}" alt="ReadyTOTransfrom.webp"
+        loading='lazy'>
+    <div class="ReadyTOTransfromContentBox container" data-aos="zoom-in-up">
+        <div class="ReadyTOTransfromContentWaper">
+            <h1>Publishers of Ray Advertising have the flexibility to choose the campaigns that align with their audience and niche</h1>
+        </div>
+        <div class="ReadyTOTransfromButtonWaper">
+             <a href="https://rayadvertising.everflowclient.io/affiliate/signup">
+                <button class="ReadyTOTransfromButton2">
+                    Get started
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="ourBlog container">
+    <h1 class="ourBlogTitel">Our latest blog</h1>
+    <div class="ourBlogWaper">
+        {% for blog in getAllBlog|slice:"0:2" %}
+        <div class="ourBlogCard">
+            <img src="{{blog.Images}}" alt="images" loading="lazy" class="ourBlogCardImages">
+            <P class="ourBlogCardText">
+                Journey Through LeadsCon 2024: Insights, Innovations, and Unforgettable Moments
+            </P>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="{% url 'events' %}" class="mt-4 d-flex justify-content-center">
+        <button class="slide_from_left imagesGalaryButton">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+        </button>
+    </a>
+</div>
+{% endblock %}

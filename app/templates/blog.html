@@ -1,0 +1,280 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+{% block title %}Ray Advertising LLC{% endblock %}
+{% block body %}
+<div class="AboutHeroSection">
+    <img class="AboutHeroSectionBG" src="{% static 'images/Assets/Hero-bg.webp' %}" alt="heroBg" loading="lazy">
+    <div class="falingSterWaper">
+        <span class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span>
+    </div>
+    <div class='AboutwoldWaper'>
+        <img class="Aboutwold" src="{% static 'images/Assets/Globe.webp' %}" alt="wold" loading="lazy">
+    </div>
+    <div class="AboutOverlay"></div>
+    <img class="Aboutcarv" src="{% static 'images/Assets/carv.webp' %}" alt="carv" loading="lazy">
+    <div class="AboutheroContent container">
+        <h1 class="AboutheroHeader">Blog</h1>
+    </div>
+</div>
+<div class="Blog">
+    <div class="BlogMenu container">
+        <div class="BlogMenuItemWaper">
+            {% if getcatagory == None %}
+            <a class="BlogMenuItemWaperActive" href="{% url 'blog' %}">All</a>
+            {% else %}
+            <a class="" href="{% url 'blog' %}">All</a>
+            {% endif %}
+
+            {% if getcatagory == 'Popular' %}
+            <a class="BlogMenuItemWaperActive" href="{% url 'blogcatagory' 'Popular' %}">Popular</a>
+            {% else %}
+            <a class="" href="{% url 'blogcatagory' 'Popular' %}">Popular</a>
+            {% endif %}
+            {% if getcatagory == 'Latest' %}
+            <a class="BlogMenuItemWaperActive" href="{% url 'blogcatagory' 'Latest' %}">Latest</a>
+            {% else %}
+            <a class="" href="{% url 'blogcatagory' 'Latest' %}">Latest</a>
+            {% endif %}
+            {% if getcatagory == 'Developer' %}
+            <a class="BlogMenuItemWaperActive" href="{% url 'blogcatagory' 'Developer' %}">Developer</a>
+            {% else %}
+            <a class="" href="{% url 'blogcatagory' 'Developer' %}">Developer</a>
+            {% endif %}
+            {% if getcatagory == 'Marketing' %}
+            <a class="BlogMenuItemWaperActive" href="{% url 'blogcatagory' 'Marketing' %}">Marketing</a>
+            {% else %}
+            <a class="" href="{% url 'blogcatagory' 'Marketing' %}">Marketing</a>
+            {% endif %}
+            {% if getcatagory == 'Management' %}
+            <a class="BlogMenuItemWaperActive" href="{% url 'blogcatagory' 'Management' %}">Management</a>
+            {% else %}
+            <a class="" href="{% url 'blogcatagory' 'Management' %}">Management</a>
+            {% endif %}
+        </div>
+        <div class="BlogMenuSearchWaper">
+            <form method="POST" action="{% url 'blogSearch' %}">
+                {% csrf_token %}
+                <div class="input-group">
+                    <input name="searchFild" type="text" class="form-control" placeholder="Search" aria-label="Recipient's username"
+                        aria-describedby="basic-addon2">
+                    <button type="submit" class="input-group-text" id="basic-addon2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="BlogCardWaper">
+        {% if GetAllBlog %}
+        {% for blogs in GetAllBlog %}
+        <a href="{% url 'detailBlog' blogs.id %}">
+            <div class="BlogCard">
+                <img class="BlogCardImages"
+                    src="https://www.rayadvertising.com/_next/image?url=https%3A%2F%2Fkqenfstzpxtowvuhsbht.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fray%2F1739392338327_image%25205.webp&w=828&q=75"
+                    alt="">
+                <div class="BlogCardContent">
+                    <p class="BlogCardContentCatagori">{{blogs.category}}</p>
+                    <h4 class="BlogCardContentTitel">
+                        {{blogs.Titel}}
+                    </h4>
+                    <div class="BlogCardContentAuthordate">
+                        <div class="BlogCardAuther">
+                            <img class="BlogCardAutherProfile me-1" src="{% static 'images/Assets/avater.webp' %}"
+                                alt="" loading="lazy"> <span class="BlogCardAutherName">{{blogs.author}}</span>
+                        </div>
+                        <div class="BlogCardDate me-2">
+                            <span>{{blogs.PostDate}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+        {% else %}
+        <h1>Result Not Found</h1>
+        {% endif %}
+    </div>
+    {% if GetAllBlog %}
+    <div class="pagynator">
+        {% if GetAllBlog.has_previous %}
+        <a href="/blog?page={{GetAllBlog.previous_page_number}}">
+            <button class="pagynatorButton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+                </svg>
+                Previous
+            </button>
+        </a>
+        {% else %}
+        <div class="pagynatorButton mpusCurserNoDrop">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>
+            Previous
+        </div>
+        {% endif %}
+        {% for number in totalpage %}
+        {% if number >= 1 %}
+            {% if number == GetAllBlog.number %}  
+                <p class="pageNumber pageNumberActive">{{number}}</p>
+                {% else %}
+                <p class="pageNumber">{{number}}</p>
+            {% endif %}
+        {% endif %}
+        <!-- <p class="pageNumber">2</p>
+        <p class="pageNumber">3</p> -->
+        {% endfor %}
+        {% if GetAllBlog.has_next %}
+        <a href="/blog?page={{GetAllBlog.next_page_number}}">
+            <button class="pagynatorButton">
+                Next
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg>
+            </button>
+        </a>
+        {% else %}
+        <div class="pagynatorButton mpusCurserNoDrop">
+            Next
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+<div class="BlogGalary">
+    <div class="imagesGalary crouselForPc container" data-aos="zoom-in">
+        <div class="imagesGalaryHeader">
+            <div class="imagesGalaryHeaderTitel"><img src="{% static 'images/Assets/gallery.svg' %}" alt="" class="me-2"
+                    loading="lazy">From Our gallery</div>
+            <a href="{% url 'gallery' %}">
+                <button class="slide_from_left imagesGalaryButton">
+                    Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                    </svg>
+                </button>
+            </a>
+        </div>
+        <div class="imagesGalaryCrasul">
+            <div id="carouselExampleIndicatorsPC" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button class="slider_nav active" type="button" data-bs-target="#carouselExampleIndicatorsPC"
+                        data-bs-slide-to="0" aria-current="true" aria-label="Slide 0"></button>
+                    {% for i in sliderCunterNumber %}
+                        <button class="slider_nav" type="button" data-bs-target="#carouselExampleIndicatorsPC"
+                            data-bs-slide-to="{{forloop.counter}}" aria-label="{{forloop.counter}}"></button>
+                    {% endfor %}
+                    
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <div class="galleryCardImagesWaper mt-5">
+                            {% for slide in getGalleryImages %}
+                            <!-- <h1>{{forloop.counter}}</h1> -->
+                            <img class="galleryCardImagesImages" src="{{slide.image.url}}" alt="image"
+                                loading="lazy">
+    
+                            {% if forloop.counter|divisibleby:4 and forloop.counter > 0 and not forloop.last %}
+                            </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                            <div class="galleryCardImagesWaper mt-5">
+                            {% else %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <button style="display: none;" class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleIndicatorsPC" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button style="display: none;" class="carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleIndicatorsPC" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="imagesGalary crouselForMobile container">
+        <div class="imagesGalaryHeader">
+            <div class="imagesGalaryHeaderTitel"><img src="{% static 'images/Assets/gallery.svg' %}" alt="" class="me-2"
+                    loading="lazy">From Our gallery</div>
+        </div>
+        <div class="imagesGalaryCrasul">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button class="slider_nav active" type="button" data-bs-target="#carouselExampleIndicatorsPC"
+                        data-bs-slide-to="0" aria-current="true" aria-label="Slide 0"></button>
+                    {% for i in Mobile_sliderCunterNumber %}
+                        <button class="slider_nav" type="button" data-bs-target="#carouselExampleIndicatorsPC"
+                            data-bs-slide-to="{{forloop.counter}}" aria-label="{{forloop.counter}}"></button>
+                    {% endfor %}
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <div class="galleryCardImagesWaper mt-3">
+                           {% for slide in getGalleryImages %}
+                            <img class="galleryCardImagesImages" src="{{slide.image.url}}" alt=""
+                                loading="lazy">
+                                {% if forloop.counter|divisibleby:2 and forloop.counter > 0 and not forloop.last %}
+                            </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                            <div class="galleryCardImagesWaper mt-3">
+                            {% else %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                </div>
+                <button style="display: none;" class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button style="display: none;" class="carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <a href="{% url 'gallery' %}" class="mt-3">
+            <button class="slide_from_left imagesGalaryButton">
+                Learn More
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg>
+            </button>
+        </a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+{% block title %}Ray Advertising LLC{% endblock %}
+{% block body %}
+<div class="AboutHeroSection">
+    <img class="AboutHeroSectionBG" src="{% static 'images/Assets/Hero-bg.webp' %}" alt="heroBg" loading="lazy">
+    <div class="falingSterWaper">
+        <span class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span>
+    </div>
+    <div class='AboutwoldWaper'>
+        <img class="Aboutwold" src="{% static 'images/Assets/Globe.webp' %}" alt="wold" loading="lazy">
+    </div>
+    <div class="AboutOverlay"></div>
+    <img class="Aboutcarv" src="{% static 'images/Assets/carv.webp' %}" alt="carv" loading="lazy">
+    <div class="AboutheroContent container">
+        <h1 class="AboutheroHeader">
+            Terms and Conditions
+        </h1>
+    </div>
+</div>
+<div class="EventDEtailsPageWaper container">
+    <div class="LegalPrivacyPolicyTAC">
+        {{getBody.Terms_Conditions|safe}}
+    </div>
+</div>
+{% endblock %}

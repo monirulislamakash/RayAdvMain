@@ -1,0 +1,356 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+{% block title %}Ray Advertising LLC{% endblock %}
+{% block body %}
+<div class="AboutHeroSection">
+    <img class="AboutHeroSectionBG" src="{% static 'images/Assets/Hero-bg.webp' %}" alt="heroBg" loading="lazy">
+    <div class="falingSterWaper">
+        <span class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span><span class="dropSter"></span><span class="dropSter"></span><span
+            class="dropSter"></span>
+    </div>
+    <div class='AboutwoldWaper'>
+        <img class="Aboutwold" src="{% static 'images/Assets/Globe.webp' %}" alt="wold" loading="lazy">
+    </div>
+    <div class="AboutOverlay"></div>
+    <img class="Aboutcarv" src="{% static 'images/Assets/carv.webp' %}" alt="carv" loading="lazy">
+    <div class="AboutheroContent container">
+        <h1 class="AboutheroHeader">About Us</h1>
+    </div>
+</div>
+<div class="WhoWeAre">
+    <div class="container">
+        <div class="WhoWeAreWaper" data-aos="zoom-in">
+            <div class="WhoWeArerImages">
+                <img src="{% static 'images/Assets/aboutPic.webp' %}" alt="" loading="lazy">
+            </div>
+            <div class="WhoWeAreContent">
+                <h1>Who We Are?</h1>
+                <p>
+                    Ray Advertising, established in 2019, is a rapidly growing and trusted performance marketing agency.
+                    We specialize in creating mutually beneficial partnerships that drive exceptional results for both
+                    advertisers and publishers. Our innovative approach combines cutting-edge technology with
+                    data-driven strategies to deliver superior performance across pay-per-call campaigns, affiliate
+                    networks, and lead generation. We've built a thriving community through a commitment to
+                    transparency, quality, and continuous innovation, making us the preferred choice for performance
+                    marketing excellence.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="trafficPatner" data-aos="zoom-in">
+    <h1 class="trafficPatnerTitle">Traffic partners</h1>
+    <div class="trafficPatnerWaper">
+        <div class="trafficPatnerWaperItem">
+            {% for i in "11" %}
+            {% for j in getTrafficImages %}
+            <img src="{{j.image}}" alt="" class="trafficPatnerImage" loading="lazy">
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="MissionVision">
+    <img class="MissionVisionBG" src="{% static 'images/Assets/CorePerformance.webp' %}" alt="MissionVision.webp"
+        loading="lazy">
+    <div class="MissionVisioncardWaper container">
+        <div class="MissionVisionCard" data-aos="zoom-in">
+            <div class="MissionVisionCardIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
+                    <g clip-path="url(#clip0_284_16084)">
+                        <path
+                            d="M27.9082 2.42188C24.8707 2.42188 21.956 2.95704 19.2523 3.93641L19.6087 4.29278C20.6856 5.36971 21.1665 6.90727 20.895 8.40591L20.0819 12.891C22.424 11.6652 25.0864 10.9705 27.9082 10.9705C37.2469 10.9705 44.8446 18.5682 44.8446 27.9069C44.8446 37.2456 37.2469 44.8433 27.9082 44.8433C18.5695 44.8433 10.9719 37.2456 10.9719 27.9069C10.9719 25.0851 11.6666 22.4228 12.8924 20.0806L8.40762 20.8935C8.13374 20.9431 7.85532 20.9681 7.57897 20.9681C6.33789 20.9681 5.17115 20.4846 4.29377 19.607L3.93771 19.251C2.95844 21.9547 2.42328 24.8694 2.42328 27.9069C2.42328 41.9595 13.8558 53.3921 27.9083 53.3921C41.9609 53.3921 53.3935 41.9595 53.3935 27.9069C53.3935 13.8544 41.9608 2.42188 27.9082 2.42188Z"
+                            fill="#00BCD0" />
+                        <path
+                            d="M27.9082 29.4562C27.5119 29.4562 27.1156 29.305 26.8133 29.0027L23.2373 25.4267C22.8424 26.1673 22.6177 27.0116 22.6177 27.9077C22.6177 30.8249 24.991 33.1982 27.9082 33.1982C30.8255 33.1982 33.1988 30.8249 33.1988 27.9077C33.1988 24.9905 30.8255 22.6172 27.9082 22.6172C27.012 22.6172 26.1677 22.8419 25.4272 23.2368L29.0032 26.8128C29.6079 27.4174 29.6079 28.398 29.0032 29.0027C28.7008 29.305 28.3045 29.4562 27.9082 29.4562Z"
+                            fill="#00BCD0" />
+                        <path
+                            d="M17.0936 19.2829C15.202 21.6501 14.0691 24.6489 14.0691 27.9077C14.0691 35.5388 20.2773 41.7471 27.9084 41.7471C35.5394 41.7471 41.7477 35.5388 41.7477 27.9077C41.7477 20.2767 35.5394 14.0684 27.9084 14.0684C24.6496 14.0684 21.6508 15.2013 19.2835 17.093L23.1772 20.9867C24.5249 20.0624 26.1542 19.5202 27.9084 19.5202C32.5333 19.5202 36.296 23.2828 36.296 27.9077C36.296 32.5327 32.5333 36.2952 27.9084 36.2952C23.2834 36.2952 19.5209 32.5327 19.5209 27.9077C19.5209 26.1536 20.063 24.5243 20.9873 23.1765L17.0936 19.2829Z"
+                            fill="#00BCD0" />
+                        <path
+                            d="M17.8476 7.85417C17.9381 7.35452 17.7779 6.84206 17.4189 6.48302L11.9951 1.05913C11.6225 0.686356 11.0857 0.528822 10.5708 0.640933C10.0559 0.753045 9.63322 1.11942 9.44915 1.61329L7.91644 5.72559L16.6502 14.4594L17.8476 7.85417Z"
+                            fill="#00BCD0" />
+                        <path
+                            d="M7.57891 17.8721C7.67068 17.8721 7.76308 17.8639 7.85516 17.8473L14.4602 16.6498L5.72649 7.91602L1.61429 9.44872C1.12042 9.63279 0.754042 10.0554 0.64193 10.5704C0.529922 11.0853 0.687353 11.622 1.06013 11.9947L6.48391 17.4184C6.77689 17.7115 7.17186 17.8721 7.57891 17.8721Z"
+                            fill="#00BCD0" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_284_16084">
+                            <rect width="52.7869" height="52.7869" fill="white"
+                                transform="translate(0.606506 0.605469)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <h1 class="MissionVisionCardTitel">Our Mission</h1>
+            <p class="MissionVisionCardText">
+                Our mission is simple yet powerful: to be a trusted partner for businesses struggling to grow through
+                innovative performance marketing solutions. By implementing advanced business analytics and strategic
+                affiliate network partnerships between advertisers and publishers, we help businesses connect with
+                high-intent leads and calls that drive sustainable growth for our clients. 
+            </p>
+        </div>
+        <div class="MissionVisionCard" data-aos="zoom-in">
+            <div class="MissionVisionCardIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+                    <g clip-path="url(#clip0_284_16092)">
+                        <path
+                            d="M29.246 14.8932C21.3316 14.8932 14.8929 21.332 14.8929 29.2464C14.8929 37.1607 21.3316 43.5993 29.246 43.5993C37.1603 43.5993 43.599 37.1606 43.599 29.2462C43.599 21.3319 37.1602 14.8932 29.246 14.8932ZM38.8204 37.3689V27.9682C38.8204 27.4736 38.4194 27.0727 37.9249 27.0727H34.6274C34.1329 27.0727 33.7319 27.4736 33.7319 27.9682V40.9796C33.1698 41.1954 32.5885 41.3717 31.9911 41.5054V30.9865C31.9911 30.492 31.5902 30.091 31.0956 30.091H27.7982C27.3037 30.091 26.9027 30.492 26.9027 30.9865V41.5884C26.3066 41.4754 25.7252 41.3206 25.1619 41.1264V34.0052C25.1619 33.5107 24.7609 33.1097 24.2664 33.1097H20.9689C20.4744 33.1097 20.0735 33.5107 20.0735 34.0052V37.8199C17.9723 35.5733 16.6837 32.5578 16.6837 29.2462C16.6837 22.3195 22.319 16.6841 29.2458 16.6841C36.1725 16.6841 41.8081 22.3195 41.8081 29.2462C41.8081 32.341 40.6825 35.1772 38.8204 37.3689ZM57.6536 28.7714C55.058 24.6207 51.8104 21.1249 48.0006 18.381C44.1182 15.5847 39.8474 13.7145 35.3062 12.8203C33.417 12.1211 31.3753 11.7385 29.2459 11.7385C27.1164 11.7385 25.0748 12.1211 23.1854 12.8205C18.6444 13.7146 14.3735 15.5848 10.4912 18.3811C6.6816 21.125 3.43387 24.6208 0.838403 28.7715C0.65673 29.062 0.65673 29.4306 0.838403 29.7211C3.43399 33.8718 6.68171 37.3676 10.4912 40.1115C14.3733 42.9075 18.6439 44.7778 23.1847 45.6719C25.0742 46.3714 27.1161 46.7541 29.2458 46.7541C31.3755 46.7541 33.4172 46.3714 35.3067 45.672C39.8476 44.7779 44.1182 42.9076 48.0004 40.1115C51.81 37.3676 55.0577 33.8718 57.6533 29.7211C57.8352 29.4305 57.8352 29.0619 57.6536 28.7714ZM29.246 44.963C20.5796 44.963 13.5291 37.9125 13.5291 29.2462C13.5291 20.58 20.5796 13.5295 29.246 13.5295C37.9122 13.5295 44.9628 20.58 44.9628 29.2462C44.9628 37.9125 37.9122 44.963 29.246 44.963ZM35.2289 21.5839C35.3579 21.8074 35.3842 22.0758 35.3011 22.3202L34.2519 25.4021C34.1251 25.7746 33.7771 26.0093 33.4042 26.0093C33.3085 26.0093 33.2112 25.9938 33.1155 25.9612C32.6473 25.8018 32.397 25.2931 32.5564 24.825L32.8378 23.9983L21.0147 30.8244C20.8737 30.9058 20.7198 30.9445 20.5678 30.9445C20.2583 30.9445 19.9573 30.7839 19.7914 30.4967C19.5441 30.0684 19.6909 29.5207 20.1191 29.2734L31.9421 22.4474L31.0855 22.2779C30.6004 22.1818 30.285 21.7107 30.381 21.2255C30.4771 20.7404 30.9486 20.425 31.4333 20.521L34.627 21.1533C34.8804 21.2033 35.0997 21.3603 35.2289 21.5839ZM14.8381 6.08189C14.5908 5.65362 14.7376 5.10591 15.1658 4.85864C15.5941 4.61149 16.1418 4.75813 16.3891 5.18639L19.5444 10.6518C19.7917 11.0801 19.645 11.6278 19.2167 11.875C19.0757 11.9564 18.9217 11.9952 18.7697 11.9952C18.4602 11.9952 18.1592 11.8345 17.9933 11.5473L14.8381 6.08189ZM19.5446 47.8407L16.3892 53.3061C16.2233 53.5933 15.9223 53.754 15.6128 53.754C15.4609 53.754 15.3069 53.7152 15.1658 53.6338C14.7376 53.3866 14.5908 52.8389 14.8381 52.4106L17.9935 46.9452C18.2407 46.5168 18.7884 46.3701 19.2167 46.6174C19.6451 46.8647 19.7918 47.4124 19.5446 47.8407ZM38.9474 10.6518L42.1028 5.18639C42.35 4.75801 42.8978 4.61126 43.326 4.85864C43.7543 5.10591 43.901 5.65362 43.6538 6.08189L40.4984 11.5473C40.3325 11.8345 40.0315 11.9952 39.722 11.9952C39.5701 11.9952 39.4161 11.9564 39.275 11.875C38.8469 11.6278 38.7001 11.0801 38.9474 10.6518ZM28.3505 8.29218V1.98143C28.3505 1.48689 28.7514 1.08594 29.246 1.08594C29.7405 1.08594 30.1415 1.48689 30.1415 1.98143V8.2923C30.1415 8.78683 29.7405 9.18779 29.246 9.18779C28.7514 9.18779 28.3505 8.78683 28.3505 8.29218ZM43.6539 52.4106C43.9011 52.8389 43.7544 53.3866 43.3261 53.6338C43.1851 53.7152 43.0311 53.754 42.8792 53.754C42.5697 53.754 42.2687 53.5933 42.1028 53.3061L38.9474 47.8407C38.7001 47.4124 38.8469 46.8647 39.2752 46.6174C39.7034 46.3704 40.2511 46.5169 40.4984 46.9452L43.6539 52.4106ZM30.1415 50.2003V56.5112C30.1415 57.0057 29.7405 57.4067 29.246 57.4067C28.7514 57.4067 28.3505 57.0057 28.3505 56.5112V50.2003C28.3505 49.7058 28.7514 49.3048 29.246 49.3048C29.7405 49.3048 30.1415 49.7057 30.1415 50.2003Z"
+                            fill="#00BCD0" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_284_16092">
+                            <rect width="57.3115" height="57.3115" fill="white"
+                                transform="translate(0.59021 0.589844)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <h1 class="MissionVisionCardTitel">Our Vision</h1>
+            <p class="MissionVisionCardText">
+                We envision becoming the number one trusted destination for performance marketing and aim to set new
+                standards of excellence in pay-per-call technology, affiliate network partnership, and lead generation
+                tactics. We are heading up to leverage a symbiotic network ecosystem where advertisers can achieve
+                ready-to-convert customers consistently and publishers gain earning potential through 24/7 ethically
+                aligned solutions. 
+            </p>
+        </div>
+    </div>
+</div>
+<div class="AboutFAQ" data-aos="zoom-in">
+    <div class="container">
+        <h1 class="FAQHeader">frequently asked questions</h1>
+        <div class="FAQWaper mt-5">
+            <div class="accordion mainFAQ" id="accordionExample">
+                {% for i in getFAQ %}
+                <div class="accordion-item mainFAQItem mt-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed focus-ring-primary" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseThree{{ forloop.counter }}"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            <div class="FAQQustionTitel">{{i.Question}}</div>
+                            <div class="FAQicon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="collapseThree{{ forloop.counter }}" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            {{i.Answer}}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="trafficPatner trafficPatnerMini" data-aos="fade-up">
+    <h1 class="trafficPatnerTitle">Featured In</h1>
+    <div class="trafficPatnerWaper">
+        <div class="trafficPatnerWaperItem">
+            {% for i in "11" %}
+            {% for j in getFeaturedImages %}
+            <img src="{{j.image}}" alt="" class="trafficPatnerImage" loading="lazy">
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="proudlySponsoring">
+    <img class="proudlySponsoringBG" src="{% static 'images/Assets/proudlySponsoring.webp' %}"
+        alt="proudlySponsoring.webp" loading='lazy'>
+    <div class="container">
+        <h1 class="proudlySponsoringHeader" data-aos="fade-up">Proudly Sponsoring</h1>
+        <p class="proudlySponsoringText" data-aos="fade-up">
+            At Ray Advertising, we take pride in more than just partnerships. We proudly sponsor and support innovative
+            industry events, tech events, affiliate search engine platforms, and similar initiatives that share our
+            vision for success.
+        </p>
+        <div class="proudlySponsoringWaper" data-aos="zoom-in">
+            {% for proudly in getProudly|slice:'0:3' %}
+            <div class="proudlySponsoringCard">
+                <div class="proudlySponsoringCardTitel mb-3">
+                    <img src="{{proudly.Icon.url}}" alt="{{proudly.Icon}}" loading="lazy">
+                    <h5 class="ms-3">{{proudly.Titel}}</h5>
+                </div>
+                <p class="proudlySponsoringCardText">
+                    {{proudly.Description|slice:'0:150'}} ...
+                </p>
+                <a href="{{proudly.ButtonLink}}">
+                    <button class="slide_from_left proudlySponsoringCardButton">
+                        Learn More
+                    </button>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="imagesGalary crouselForPc container" data-aos="zoom-in">
+    <div class="imagesGalaryHeader">
+        <div class="imagesGalaryHeaderTitel"><img src="{% static 'images/Assets/gallery.svg' %}" alt="" class="me-2"
+                loading="lazy">From Our gallery</div>
+        <a href="{% url 'gallery' %}">
+            <button class="slide_from_left imagesGalaryButton">
+                Learn More
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg>
+            </button>
+        </a>
+    </div>
+    <div class="imagesGalaryCrasul">
+        <div id="carouselExampleIndicatorsPC" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button class="slider_nav active" type="button" data-bs-target="#carouselExampleIndicatorsPC"
+                    data-bs-slide-to="0" aria-current="true" aria-label="Slide 0"></button>
+                {% for i in sliderCunterNumber %}
+                <button class="slider_nav" type="button" data-bs-target="#carouselExampleIndicatorsPC"
+                    data-bs-slide-to="{{forloop.counter}}" aria-label="{{forloop.counter}}"></button>
+                {% endfor %}
+
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <div class="galleryCardImagesWaper mt-5">
+                        {% for slide in getGalleryImages %}
+                        <!-- <h1>{{forloop.counter}}</h1> -->
+                        <img class="galleryCardImagesImages" src="{{slide.image}}" alt="image" loading="lazy">
+
+                        {% if forloop.counter|divisibleby:4 and forloop.counter > 0 and not forloop.last %}
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="galleryCardImagesWaper mt-5">
+                        {% else %}
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <button style="display: none;" class="carousel-control-prev" type="button"
+                data-bs-target="#carouselExampleIndicatorsPC" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button style="display: none;" class="carousel-control-next" type="button"
+                data-bs-target="#carouselExampleIndicatorsPC" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="imagesGalary crouselForMobile container" data-aos="zoom-in">
+    <div class="imagesGalaryHeader">
+        <div class="imagesGalaryHeaderTitel"><img src="{% static 'images/Assets/gallery.svg' %}" alt="" class="me-2"
+                loading="lazy">From Our gallery</div>
+    </div>
+    <div class="imagesGalaryCrasul">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button class="slider_nav active" type="button" data-bs-target="#carouselExampleIndicatorsPC"
+                    data-bs-slide-to="0" aria-current="true" aria-label="Slide 0"></button>
+                {% for i in Mobile_sliderCunterNumber %}
+                <button class="slider_nav" type="button" data-bs-target="#carouselExampleIndicatorsPC"
+                    data-bs-slide-to="{{forloop.counter}}" aria-label="{{forloop.counter}}"></button>
+                {% endfor %}
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <div class="galleryCardImagesWaper mt-3">
+                        {% for slide in getGalleryImages %}
+                        <img class="galleryCardImagesImages" src="{{slide.image}}" alt="" loading="lazy">
+                        {% if forloop.counter|divisibleby:2 and forloop.counter > 0 and not forloop.last %}
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="galleryCardImagesWaper mt-3">
+                        {% else %}
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+            <button style="display: none;" class="carousel-control-prev" type="button"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button style="display: none;" class="carousel-control-next" type="button"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <a href="{% url 'gallery' %}" class="mt-3">
+        <button class="slide_from_left imagesGalaryButton">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+        </button>
+    </a>
+</div>
+<div class="ReadyTOTransfrom">
+    <img class="ReadyTOTransfromBG" src="{% static 'images/Assets/ReadyTOTransfrom.webp' %}" alt="ReadyTOTransfrom.webp"
+        loading='lazy'>
+    <div class="ReadyTOTransfromContentBox" data-aos="zoom-in-up">
+        <div class="ReadyTOTransfromContentWaper">
+            <h1>Ready to Transform Your Advertising?</h1>
+            <p>Launch your first campaign with Ray Advertising today.</p>
+        </div>
+        <div class="ReadyTOTransfromButtonWaper">
+            <a href="https://calendly.com/nayeem-ray-advertising/discussion">
+                <button class="ReadyTOTransfromButton1">
+                    Schedule a Meeting
+                </button>
+            </a>
+            <a href="https://rayadvertising.everflowclient.io/advertiser/signup">
+                <button class="ReadyTOTransfromButton2">
+                    Get started
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="ourBlog container" data-aos="zoom-in">
+    <h1 class="ourBlogTitel">Our latest blog</h1>
+    <div class="ourBlogWaper">
+        {% for blog in getAllBlog|slice:"0:2" %}
+        <div class="ourBlogCard">
+            <img src="{{blog.Images}}" alt="images" loading="lazy" class="ourBlogCardImages">
+            <P class="ourBlogCardText">
+                Journey Through LeadsCon 2024: Insights, Innovations, and Unforgettable Moments
+            </P>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="{% url 'events' %}" class="mt-4 d-flex justify-content-center">
+        <button class="slide_from_left imagesGalaryButton">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+        </button>
+    </a>
+</div>
+{% endblock %}
