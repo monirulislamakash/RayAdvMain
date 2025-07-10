@@ -120,13 +120,20 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Add by Akash
-import os
-MEDIA_ROOT=os.path.join(BASE_DIR,'')
-MEDIA_URL="//"
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles' # <--- ADDED THIS LINE
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+# Media files (User-uploaded content)
+MEDIA_URL = '/media/' # <--- MODIFIED THIS LINE
+MEDIA_ROOT = BASE_DIR / 'media' # <--- MODIFIED THIS LINE (changed from os.path.join(BASE_DIR, '') to a dedicated 'media' directory)
+
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
